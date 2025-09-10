@@ -1,55 +1,54 @@
-# SauceDemo Automation Testing
+# 🧪 Almosafer Automation Testing
+This project automates the functional testing of the [Almosafer](https://www.almosafer.com/en) travel booking website using **Selenium WebDriver** and **TestNG**.  
+The tests validate critical user journeys such as verifying default language, contact number, currency, hotel tab behavior, date pickers, city search, and search result validation.
 
-This project is an automated testing suite for the [SauceDemo](https://www.saucedemo.com/) web application. It is developed using **Java**, **Selenium WebDriver**, and **TestNG**, and simulates user interactions such as logging in, adding/removing items from the cart, and completing the checkout process.
+---
 
+## 📂 Project Structure
+```
+Almosafer  
+│── src/ # Source code for tests  
+│ └── AlmosaferTests/ # Test packages & classes  
+│ ├── TestData.java # Holds test data & random city generator  
+│ └── MyTestCases.java # Main test cases  
+│  
+│── pom.xml # Maven dependencies & build management  
+│── test-output/ # TestNG generated reports  
+│── target/ # Compiled files  
+│── bin/ # Compiled class files  
+│── README.md # Project documentation
+```
 ---
 
 ## 🛠️ Tools & Frameworks
+- **Java (JDK 21)** – Programming language  
+- **Selenium WebDriver** – Browser automation  
+- **TestNG** – Test execution & reporting  
+- **Maven** – Dependency management & build tool  
+- **ChromeDriver** – WebDriver implementation for Chrome  
 
-- **TestNG** – For structuring and prioritizing test cases  
-- **Selenium WebDriver** – For interacting with the web UI  
-- **EdgeDriver** – Used as the default browser for this test suite  
-- **WebDriverManager** – To manage drivers automatically
 ---
+
 ## ✅ Features & Test Scenarios
+The project includes multiple automated test cases covering UI and functional flows:
 
-1. **Login Test**  
-   - Enters valid credentials and logs into the application.
-
-2. **Add to Cart Test**  
-   - Adds two specific items to the shopping cart.
-
-3. **Remove from Cart Test**  
-   - Removes the previously added items from the cart.
-
-4. **Re-Add Items Test**  
-   - Adds the same two items again after removal.
-
-5. **Checkout Process Test**  
-   - Navigates to the cart, fills out the checkout form, and completes the purchase.
-
-6. **Logout Test**  
-   - Logs the user out via the burger menu.
-
-7. **Add All Items to the Cart (Even-Indexed Only)**  
-   - Iterates over all available products and adds only those with even indexes to the cart.  
-   - Prints the name and price of each product and logs whether it was added or not based on its index.
-
-8. **(Commented) Dynamic Price Handling (Optional)**  
-   - Includes optional logic (currently commented) to collect product prices dynamically into a list.  
-   - Can be used for advanced validations, like total price calculations or conditional filtering based on price.
+1. **Language Verification** – Check that the default language is English.  
+2. **Contact Number Validation** – Ensure the displayed number matches the expected one.  
+3. **Currency Verification** – Confirm that SAR is set as the default currency.  
+4. **Qitaf Logo Test** – Validate presence of the Qitaf logo in the footer.  
+5. **Hotel Tab Test** – Verify that the Hotels tab is not selected by default.  
+6. **Flight Dates (Departure)** – Ensure tomorrow’s date is correctly set.  
+7. **Flight Dates (Return)** – Ensure the day after tomorrow is correctly set.  
+8. **Random Language Switching** – Switch randomly between English and Arabic.  
+9. **Hotel Search (City Input)** – Test input of random city names (EN/AR).  
+10. **Room Options Selection** – Randomly choose between available room options.  
+11. **Search Hotels Button** – Ensure the search button functions correctly.  
+12. **Search Result Validation** – Confirm that search results are displayed with expected text.  
 
 ---
+
 ## 📌 Notes
-
-- `Thread.sleep()` is used for wait simulation, but in real-world scenarios, explicit or fluent waits are preferred for reliability.
-- `@BeforeTest` sets up the browser, and `@AfterTest` closes it after test execution.
-- Test priority ensures logical and sequential flow of the test cases.
-
----
-## 📸 Screenshots
-![SauceDemoOutput](https://github.com/user-attachments/assets/106f1d02-312f-445e-bc40-cfda5bbcfedf)   
-![eclipse_aoHI2XXlrS](https://github.com/user-attachments/assets/b27b9696-0e07-4a3a-8894-a3e2781e9dfc)
-
-
-"# Almosafer-Automation" 
+- Tests are written in **Java with TestNG annotations** (`@BeforeTest`, `@Test`, `@AfterTest`).  
+- Randomization is applied for **city selection** and **language switching**.  
+- Dates are dynamically generated based on the current system date (departure = tomorrow, return = day after tomorrow).  
+- Ensure **ChromeDriver** is installed and compatible with your Chrome browser version. 
