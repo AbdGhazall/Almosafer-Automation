@@ -1,4 +1,4 @@
-# 🧪 Almosafer Automation Testing
+# Almosafer Automation Testing
 This project automates the functional testing of the [Almosafer](https://www.almosafer.com/en) travel booking website using **Selenium WebDriver** and **TestNG**.  
 The tests validate critical user journeys such as verifying default language, contact number, currency, hotel tab behavior, date pickers, city search, and search result validation.
 
