@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestData {
 	// WebDriver instance for browser automation
 	WebDriver driver = new ChromeDriver();
+
+	// or use this website
+	// https://kw.almosafer.com/en?destination=&destinationiata=&origin=&originiata=&ncr=1&sem=1&title=&subtitle=Book+with+Almosafer+to+Get+the+Best+Discounts+and+Deals+Online&utm_source=google&utm_medium=cpc&utm_term=AM-SEM-KWI-Brand-English&utm_content=149575914202&utm_campaign=19957705437&gad_source=1&gad_campaignid=19957705437&gbraid=0AAAAADN9nx-qha0YqS3_CA-kaoOyCRK0i&gclid=Cj0KCQjww4TGBhCKARIsAFLXndQCZKunw6mI0ubIoapXRxnGe8V1dhXPAqM06YbOgnrcK-jLMjqjtpYaAjewEALw_wcB
 	String URL = "https://www.almosafer.com/en"; // The URL of the website being tested
 	Random random = new Random(); // Random number generator for random test data
 	int randomIndex = random.nextInt(); // Random index for various selections
